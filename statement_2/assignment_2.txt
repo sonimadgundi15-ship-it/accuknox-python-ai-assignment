@@ -1,0 +1,27 @@
+1. Where would you rate yourself on LLM Deep Learning AI and ML?
+    For LLM and AI I would rate myself B. I have learned and implemented these concepts during my classes. I have worked with LLMs prompt engineering LangChain LangGraph AI agents and tool calling.
+    For Deep Learning and ML I would rate myself C because I have basic theoretical knowledge but I have not worked on them deeply.
+
+2. What are the key architectural components to create an LLM chatbot?
+
+    At a high level an LLM chatbot has a few main components.
+    First we have the user interface where the user asks a question.
+    Then we have the backend or API layer which receives the request and manages the conversation.
+    Then we have the LLM which understands the question and generates the response.
+    We also use prompts or system instructions to control how the LLM should respond.
+    If the chatbot needs information from documents or external data we can use RAG. The documents are converted into embeddings and stored in a vector database. When the user asks a question we find the relevant information and send it to the LLM as context.
+    We can also add tools or APIs if the chatbot needs to perform actions.
+    We also need conversation history memory authentication error handling and monitoring.
+
+    Simple flow: 
+        User → UI → Backend → Prompt and Memory → LLM → Response
+    And with RAG :
+        Documents → Embeddings → Vector Database → Relevant Context → LLM → Response
+
+3. Explain vector databases
+
+    A vector database is used to store and search vector embeddings.
+    For example if I create a chatbot that answers questions from company documents I can convert the documents into embeddings and store them in a vector database.
+    When a user asks a question the question is also converted into an embedding. The vector database finds the most similar information and returns it. That information is then given to the LLM to generate the answer.
+    For a small project I would choose FAISS because it is simple and good for similarity search and learning.
+    For a production application I would consider Pinecone or Qdrant depending on the project requirements.
