@@ -40,3 +40,5 @@ connection.close()
 
 print("--------------------------------------------------")
 print(f"Success! Finished importing {counter} users to the database.")
+
+# CSv file -> read data using python -> insert data into db -> retrive data -> print data

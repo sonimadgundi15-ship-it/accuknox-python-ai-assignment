@@ -10,6 +10,8 @@ try:
     response.raise_for_status()
     data_payload = response.json()
     student_records = data_payload.get("data", [])
+    print(student_records)
+
     print("✅ Success: Fetched data live from the API.")
 
 except requests.exceptions.RequestException as error:
@@ -23,6 +25,8 @@ except requests.exceptions.RequestException as error:
         {"id": 4, "first_name": "Emily", "last_name": "Brown"},
         {"id": 5, "first_name": "Michael", "last_name": "Davis"},
     ]
+
+
 
 student_names = []
 calculated_averages = []
@@ -96,3 +100,6 @@ if student_names and calculated_averages:
 
     plt.tight_layout()
     plt.show()
+
+
+# Api -> student data -> calcualte marks -> calculate avg -> then create a bar chart

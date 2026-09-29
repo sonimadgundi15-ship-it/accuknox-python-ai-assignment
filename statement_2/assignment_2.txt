@@ -1,27 +1,46 @@
 1. Where would you rate yourself on LLM Deep Learning AI and ML?
-    For LLM and AI I would rate myself B. I have learned and implemented these concepts during my classes. I have worked with LLMs prompt engineering LangChain LangGraph AI agents and tool calling.
-    For Deep Learning and ML I would rate myself C because I have basic theoretical knowledge but I have not worked on them deeply.
+    For LLM and AI, I would rate myself B.
+    I have learned and implemented these concepts during my classes. I have worked with concepts like LLMs, prompt engineering, LangChain, LangGraph, AI agents, and tool calling.
+    I would not say that I am an expert because I have not worked on LLM or AI professionally. My practical exposure in this area comes from my classes and learning projects.
+    My stronger area is Python and backend development. I have experience with Python, Django, Django REST Framework, REST APIs, SQL, CRUD operations, database operations, validations, and business logic.
+    For Deep Learning, I would rate myself C because I currently do not have knowledge or practical experience in Deep Learning.
+    For Machine Learning, I would also rate myself C because I have not worked on Machine Learning projects yet.
+    I am interested in learning these areas in the future, but currently my strongest skills are Python and backend development, along with the LLM and AI concepts I learned during my classes.
+
 
 2. What are the key architectural components to create an LLM chatbot?
 
-    At a high level an LLM chatbot has a few main components.
-    First we have the user interface where the user asks a question.
-    Then we have the backend or API layer which receives the request and manages the conversation.
-    Then we have the LLM which understands the question and generates the response.
-    We also use prompts or system instructions to control how the LLM should respond.
-    If the chatbot needs information from documents or external data we can use RAG. The documents are converted into embeddings and stored in a vector database. When the user asks a question we find the relevant information and send it to the LLM as context.
-    We can also add tools or APIs if the chatbot needs to perform actions.
-    We also need conversation history memory authentication error handling and monitoring.
+    At a high level, an LLM chatbot has several components.
+    First, we have the user interface, where the user enters a question.
+    Then we have the backend or API layer. Since I have experience with Python and Django REST Framework, I understand this as the layer that receives the user's request and manages the communication between the user and the other components.
+    Then we have the LLM, which understands the user's question and generates a response.
+    We can use prompts or system instructions to tell the LLM how it should respond.
+    We can also have conversation history or memory, which helps the chatbot understand previous messages and follow-up questions.
+    If the chatbot needs to answer questions from company documents, we can use RAG, which means Retrieval-Augmented Generation.
+    In RAG, documents are divided into smaller pieces and converted into embeddings. These embeddings are stored in a vector database.
+    When the user asks a question, the question is also converted into an embedding. The system searches the vector database and retrieves the most relevant information.
+    That information is then given to the LLM as context, and the LLM generates the final answer.
+    We can also connect external tools or APIs if the chatbot needs to perform specific tasks.
+    So the simple flow is:
+        User → UI → Backend/API → Prompt + Memory → LLM → Response
 
-    Simple flow: 
-        User → UI → Backend → Prompt and Memory → LLM → Response
-    And with RAG :
+    For RAG:
         Documents → Embeddings → Vector Database → Relevant Context → LLM → Response
+
+    Other important components can include authentication, error handling, logging, monitoring, and security.
 
 3. Explain vector databases
 
     A vector database is used to store and search vector embeddings.
-    For example if I create a chatbot that answers questions from company documents I can convert the documents into embeddings and store them in a vector database.
-    When a user asks a question the question is also converted into an embedding. The vector database finds the most similar information and returns it. That information is then given to the LLM to generate the answer.
-    For a small project I would choose FAISS because it is simple and good for similarity search and learning.
-    For a production application I would consider Pinecone or Qdrant depending on the project requirements.
+    For example, suppose we have many company documents and want to create a chatbot that can answer questions from those documents.
+    First, we convert the document text into embeddings. Embeddings are numerical representations of the meaning of the text.
+    We store these embeddings in a vector database.
+    When a user asks a question, the question is also converted into an embedding.
+    The vector database then searches for the most similar or relevant information from the stored embeddings.
+    That relevant information is given to the LLM as context, and the LLM generates the final answer.
+    The basic flow is:
+        Documents → Embeddings → Vector Database → Similarity Search → Relevant Context → LLM → Answer
+    
+    For a small project or learning, I would choose FAISS because it is simple and useful for understanding similarity search.
+    For a production application, I would consider options such as Pinecone or Qdrant, depending on the project requirements.
+    Since I am still a beginner in AI and LLM, I would be clear that my knowledge of vector databases comes from learning and implementing these concepts during my classes. My stronger practical experience is in Python and backend development.

@@ -27,16 +27,13 @@ cursor.execute("""
 """)
 cursor.execute
 
-for i in books[:3]:
+for i in books:
     authors = i.get("author_name") or []
     author = ", ".join(authors)
     publication_year = i.get('first_publish_year')
     title = i.get('title')
 
-    
-    print(author)
-    print()
-
+   
     cursor.execute("""
         INSERT INTO books(title, author, publication_year)
         VALUES (?, ?, ?) """,
@@ -53,3 +50,4 @@ for i in rows:
     print(i)
 
 
+# Api - > Json data -> Exctracting book details -> store sqlite db -> Retrive data 
